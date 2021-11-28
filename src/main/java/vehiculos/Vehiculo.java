@@ -1,6 +1,6 @@
 package vehiculos;
 
-public class Vehículo {
+public class Vehiculo {
     private String placa;
     private int puertas;
     private int velocidadMaxima;
@@ -10,6 +10,18 @@ public class Vehículo {
     private String traccion;
     private Fabricante fabricante;
 
+    public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante) {
+        this.placa = placa;
+        this.puertas = puertas;
+        this.velocidadMaxima = velocidadMaxima;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.peso = peso;
+        this.traccion = traccion;
+        this.fabricante = fabricante;
+    }
+
+    //---------------------------getter and setter------------------------------------
 
     public String getPlaca() {
         return placa;
@@ -74,4 +86,14 @@ public class Vehículo {
     public void setFabricante(Fabricante fabricante) {
         this.fabricante = fabricante;
     }
+
+    //-------------------------fin getter and setter ------------------------------------
+
+
+    public int getCantidadVehiculos(){
+        return 1; //cantidad de vehiculos creados
+    }
+
+
+
 }

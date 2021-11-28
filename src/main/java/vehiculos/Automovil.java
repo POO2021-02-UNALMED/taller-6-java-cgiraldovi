@@ -1,9 +1,12 @@
 package vehiculos;
 
-public class Automóvil extends Vehículo{
+public class Automovil extends Vehiculo {
     private int puestos;
 
-    public Automóvil(){
+    public Automovil(String placa, String nombre,
+                     int peso, int precio,
+                     Fabricante fabricante, int puertas){
+        super(placa,puertas,0,nombre,precio,peso,"",fabricante);
         super.setPuertas(4);
         super.setVelocidadMaxima(100);
         super.setTraccion("FWD");

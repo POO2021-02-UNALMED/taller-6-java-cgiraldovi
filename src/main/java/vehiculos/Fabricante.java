@@ -2,7 +2,12 @@ package vehiculos;
 
 public class Fabricante {
     private String nombre;
-    private País pais;
+    private Pais pais;
+
+    public Fabricante(String nombre, Pais pais){
+        setNombre(nombre);
+        setPais(pais);
+    }
 
     public String getNombre() {
         return nombre;
@@ -12,11 +17,11 @@ public class Fabricante {
         this.nombre = nombre;
     }
 
-    public País getPais() {
+    public Pais getPais() {
         return pais;
     }
 
-    public void setPais(País pais) {
+    public void setPais(Pais pais) {
         this.pais = pais;
     }
 }
