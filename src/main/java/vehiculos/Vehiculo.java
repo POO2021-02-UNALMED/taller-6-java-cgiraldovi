@@ -90,10 +90,12 @@ public class Vehiculo {
     //-------------------------fin getter and setter ------------------------------------
 
 
-    public int getCantidadVehiculos(){
+    public static int getCantidadVehiculos(){
         return 1; //cantidad de vehiculos creados
     }
 
+    public static void setCantidadVehiculos(int numero){
 
+    }
 
 }
