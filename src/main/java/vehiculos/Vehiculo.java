@@ -10,6 +10,13 @@ public class Vehiculo {
     private String traccion;
     private Fabricante fabricante;
 
+    //atributos (contadores) de los metodos getcantidadvehiculos y vehiculosportipos
+    private static int cantidadVehiculos;
+    private int cantidadAutomoviles;
+    private int cantidadCamiones;
+    private int cantidadCamionetas;
+    //fin
+
     public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante) {
         this.placa = placa;
         this.puertas = puertas;
@@ -19,6 +26,8 @@ public class Vehiculo {
         this.peso = peso;
         this.traccion = traccion;
         this.fabricante = fabricante;
+
+        Vehiculo.cantidadVehiculos ++;
     }
 
     //---------------------------getter and setter------------------------------------
@@ -90,12 +99,44 @@ public class Vehiculo {
     //-------------------------fin getter and setter ------------------------------------
 
 
+
     public static int getCantidadVehiculos(){
-        return 1; //cantidad de vehiculos creados
+        return cantidadVehiculos; //cantidad de vehiculos creados
     }
 
     public static void setCantidadVehiculos(int numero){
-
+        Vehiculo.cantidadVehiculos = numero;
     }
+
+    public int getCantidadAutomoviles() {
+        return cantidadAutomoviles;
+    }
+
+    public void setCantidadAutomoviles() {
+        this.cantidadAutomoviles++;
+    }
+
+    public int getCantidadCamiones() {
+        return cantidadCamiones;
+    }
+
+    public void setCantidadCamiones() {
+        this.cantidadCamiones ++;
+    }
+
+    public int getCantidadCamionetas() {
+        return cantidadCamionetas;
+    }
+
+    public void setCantidadCamionetas() {
+        this.cantidadCamionetas ++;
+    }
+
+    public String vehiculosPorTipo(){
+        return "Automoviles: "+ getCantidadAutomoviles()+
+                "Camionetas: "+getCantidadCamionetas()+
+                "Camiones: "+getCantidadCamiones();
+    }
+
 
 }

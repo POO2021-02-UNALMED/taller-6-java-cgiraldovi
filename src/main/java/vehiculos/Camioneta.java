@@ -7,6 +7,8 @@ public class Camioneta extends Vehiculo {
         super(placa,puertas,0,nombre,precio,peso,"",fabricante);
         super.setVelocidadMaxima(90);
         super.setTraccion("4X4");
+        //contador
+        super.setCantidadCamionetas();
     }
 
     public boolean isVolco() {

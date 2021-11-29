@@ -9,6 +9,8 @@ public class Camion extends Vehiculo {
         super.setPuertas(2);
         super.setVelocidadMaxima(80);
         super.setTraccion("4X2");
+        //contador
+        super.setCantidadCamiones();
     }
 
     public int getEjes() {

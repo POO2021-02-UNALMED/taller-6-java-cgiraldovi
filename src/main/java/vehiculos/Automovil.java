@@ -10,6 +10,8 @@ public class Automovil extends Vehiculo {
         super.setPuertas(4);
         super.setVelocidadMaxima(100);
         super.setTraccion("FWD");
+        //contador
+        super.setCantidadAutomoviles();
     }
 
     public int getPuestos() {
