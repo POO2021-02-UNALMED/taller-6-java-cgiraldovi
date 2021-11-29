@@ -27,7 +27,9 @@ public class Vehiculo {
         this.traccion = traccion;
         this.fabricante = fabricante;
 
+        //metodos
         Vehiculo.cantidadVehiculos ++;
+        Fabricante.setVehiculos(this);
     }
 
     //---------------------------getter and setter------------------------------------
