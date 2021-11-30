@@ -10,7 +10,7 @@ public class Fabricante {
     private static ArrayList<Vehiculo> vehiculos = new ArrayList<>();
     private int contador;
 
-    public Fabricante(String nombre, Pais pais){
+    public Fabricante(String nombre, Pais pais) {
         setNombre(nombre);
         setPais(pais);
         //metodo
@@ -38,34 +38,40 @@ public class Fabricante {
     //metodos
 
 
-    public static Fabricante fabricaMayorVentas(){
+    public static Fabricante fabricaMayorVentas() {
         Fabricante fabricaMayorVentas = new Fabricante("", new Pais(""));
 
-        for (Fabricante fabricante : fabricantes) {
 
-            for (Vehiculo vehiculo : vehiculos) {
-                if (fabricante == vehiculo.getFabricante()){
-                    fabricante.contador ++;
+        for (Vehiculo vehiculo : vehiculos) {
+            for (Fabricante fabricante : fabricantes) {
+                if (fabricante.getNombre().equals(vehiculo.getFabricante().getNombre())) {
+                    fabricante.setContador();
                     break;
                 }
+
             }
         }
 
-        for (Fabricante fabricante: fabricantes) {
-            if(fabricante.contador >= fabricaMayorVentas.contador){
+
+        for (Fabricante fabricante : fabricantes) {
+            if (fabricante.contador >= fabricaMayorVentas.contador) {
                 fabricaMayorVentas = fabricante;
             }
         }
 
         return fabricaMayorVentas;
 
+
+    }
+
+    public void setContador() {
+        this.contador++;
     }
 
 
-    public static void setVehiculos(Vehiculo vehiculo){
+    public static void setVehiculos(Vehiculo vehiculo) {
         vehiculos.add(vehiculo);
     }
-
 
 
 }
